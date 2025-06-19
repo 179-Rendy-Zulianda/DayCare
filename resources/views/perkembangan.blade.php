@@ -72,7 +72,7 @@
                     <div class="flex flex-col gap-4">
                         <div class="flex items-start gap-4">
                             <img src="{{ asset('img/perkembangan.png') }}" alt="Perkembangan Anak" class="w-60 h-60 rounded-lg">
-                            <div class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-4 border border-black rounded-lg p-4"></div>
                                 <div>
                                     <h4 class="skill-category font-bold">Perkembangan Kemampuan Motorik</h4>
                                     <p class="mt-1">Nien semakin baik dalam menggambar dan mewarnai</p>

@@ -84,15 +84,17 @@
         <h2 class="text-xl md:text-2xl font-bold bg-white inline-block px-6 py-2 rounded-full mb-4">Lokasi Kami</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mx-auto max-w-4xl">
             <div>
-                <img src="{{ asset('img/maps.png') }}" alt="Maps" class="w-full rounded-xl shadow-lg">
+                <iframe 
+                    src="https://www.google.com/maps?q=59PP%2BQCV,+Pandeyan,+Umbulharjo,+Yogyakarta&output=embed"
+                    width="100%" height="250" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
                 <p class="mt-4 bg-white px-4 py-2 rounded-xl text-sm shadow">59PP+QCV, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55161</p>
-                <a href="#hubungi" class="mb-10 inline-block mt-4 bg-white px-6 py-2 rounded-full border hover:bg-gray-100">Hubungi Kami</a>
+                <a href="https://wa.me/6289633446296?text=Halo%20CandiceKids%2C%20saya%20ingin%20bertanya" class="mb-10 inline-block mt-4 bg-white px-6 py-2 rounded-full border hover:bg-gray-100">Hubungi Kami</a>
             </div>
             <div class="flex justify-center">
                 <img src="{{ asset('img/kidsfooter.png') }}" alt="Kids Footer" class="w-48 md:w-56">
             </div>
-        </div>
-    </section>
         </div>
     </section>
 </body>

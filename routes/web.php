@@ -60,3 +60,13 @@ Route::middleware('auth')->group(function () {
     // Anda bisa menambahkan route resource controller di sini jika diperlukan
     // Route::resource('profile', ProfileController::class);
 });
+
+// Route Admin (sementara untuk semua role, tanpa middleware khusus)
+Route::prefix('admin')->group(function () {
+    Route::view('/dashboard', 'admin.dashboard')->name('admin.dashboard');
+    Route::view('/user', 'admin.user')->name('admin.user');
+    Route::view('/anak', 'admin.anak')->name('admin.anak');
+    Route::view('/tagihan', 'admin.tagihan')->name('admin.tagihan');
+    Route::view('/aktivitas', 'admin.aktivitas')->name('admin.aktivitas');
+    Route::view('/notifikasi', 'admin.notifikasi')->name('admin.notifikasi');
+});

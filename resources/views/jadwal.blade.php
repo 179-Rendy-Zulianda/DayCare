@@ -84,18 +84,18 @@
                         <span class="text-gray-700 hover:text-orange-600">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💬</span>
                         <span class="text-gray-700 hover:text-orange-600">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                </li> -->
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💳</span>
                         <span class="text-gray-700 hover:text-orange-600">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">📈</span>
@@ -160,18 +160,18 @@
                         <span class="text-gray-700">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💬</span>
                         <span class="text-gray-700">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                </li> -->
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💳</span>
                         <span class="text-gray-700">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">📈</span>
@@ -297,12 +297,19 @@
                     <div class="glass-effect rounded-2xl overflow-hidden shadow-lg">
                         <div class="overflow-x-auto">
                             <table class="min-w-full">
-                                <thead class="bg-gradient-to-r from-orange-400 to-yellow-400">
-                                    <tr>
-                                        <th class="py-4 px-6 text-white font-semibold text-left">Waktu</th>
-                                        <th class="py-4 px-6 text-white font-semibold text-left">Kegiatan</th>
-                                    </tr>
-                                </thead>
+                            <thead class="bg-orange-400">
+    <tr>
+        <th class="py-4 px-6 text-white font-semibold text-left" 
+            style="background: #f97316 !important; color: #fff !important; font-weight: bold !important; box-shadow: 0 4px 14px 0 rgba(236,72,153,0.15);">
+            Waktu
+        </th>
+        <th class="py-4 px-6 text-white font-semibold text-left" 
+            style="background: #f97316 !important; color: #fff !important; font-weight: bold !important; box-shadow: 0 4px 14px 0 rgba(236,72,153,0.15);">
+            Kegiatan
+        </th>
+    </tr>
+</thead>
+
                                 <tbody class="bg-white/80 backdrop-blur-sm">
                                     <tr class="hover:bg-yellow-50/80 transition-colors border-b border-gray-100">
                                         <td class="py-4 px-6 font-medium text-gray-800">07:30 - 08:00</td>

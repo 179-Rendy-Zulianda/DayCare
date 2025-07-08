@@ -83,12 +83,12 @@
                         <span class="text-gray-700 hover:text-orange-600">Chat Pengasuh</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💳</span>
                         <span class="text-gray-700 hover:text-orange-600">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">📈</span>
@@ -153,18 +153,18 @@
                         <span class="text-gray-700">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💬</span>
                         <span class="text-gray-700">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                </li> -->
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💳</span>
                         <span class="text-gray-700">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">📈</span>
@@ -218,9 +218,11 @@
                                class="w-full rounded-xl px-4 py-3 bg-white/80 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all" 
                                value="{{ date('Y-m-d') }}">
                     </div>
-                    <button class="bg-gradient-to-r from-orange-400 to-yellow-400 hover:from-orange-500 hover:to-yellow-500 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg card-hover">
-                        Tampilkan
-                    </button>
+                    <button class="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg card-hover"
+        style="background: linear-gradient(to right, #f97316, #ec4899) !important; color: #fff !important; font-weight: bold !important; box-shadow: 0 4px 14px 0 rgba(236,72,153,0.15);">
+    Tampilkan
+</button>
+
                 </div>
             </div>
 
@@ -228,14 +230,28 @@
             <div class="glass-effect rounded-2xl overflow-hidden shadow-lg">
                 <div class="overflow-x-auto">
                     <table class="min-w-full">
-                        <thead class="bg-gradient-to-r from-orange-400 to-yellow-400">
-                            <tr>
-                                <th class="py-4 px-4 text-white font-semibold text-sm lg:text-base">Tanggal</th>
-                                <th class="py-4 px-4 text-white font-semibold text-sm lg:text-base">Status</th>
-                                <th class="py-4 px-4 text-white font-semibold text-sm lg:text-base">Waktu Masuk</th>
-                                <th class="py-4 px-4 text-white font-semibold text-sm lg:text-base">Waktu Keluar</th>
-                            </tr>
-                        </thead>
+                    <thead class="bg-orange-400">
+    <tr>
+        <th class="py-4 px-4 text-white font-semibold text-sm lg:text-base" 
+            style="background: #f97316 !important; color: #fff !important; font-weight: bold !important; box-shadow: 0 4px 14px 0 rgba(236,72,153,0.15);">
+            Tanggal
+        </th>
+        <th class="py-4 px-4 text-white font-semibold text-sm lg:text-base" 
+            style="background: #f97316 !important; color: #fff !important; font-weight: bold !important; box-shadow: 0 4px 14px 0 rgba(236,72,153,0.15);">
+            Status
+        </th>
+        <th class="py-4 px-4 text-white font-semibold text-sm lg:text-base" 
+            style="background: #f97316 !important; color: #fff !important; font-weight: bold !important; box-shadow: 0 4px 14px 0 rgba(236,72,153,0.15);">
+            Waktu Masuk
+        </th>
+        <th class="py-4 px-4 text-white font-semibold text-sm lg:text-base" 
+            style="background: #f97316 !important; color: #fff !important; font-weight: bold !important; box-shadow: 0 4px 14px 0 rgba(236,72,153,0.15);">
+            Waktu Keluar
+        </th>
+    </tr>
+</thead>
+
+
                         <tbody class="bg-white/80 backdrop-blur-sm">
                             <tr class="hover:bg-yellow-50/80 transition-colors border-b border-gray-100">
                                 <td class="py-4 px-4 text-sm lg:text-base">10/04/2024</td>

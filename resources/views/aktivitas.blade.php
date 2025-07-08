@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aktivitas Harian - CandiceKids</title>
+    <title>Aktivitas Anak Saya - CandiceKids</title>
     @vite('resources/css/app.css')
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -84,18 +84,18 @@
                         <span class="font-semibold text-gray-800">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💬</span>
                         <span class="text-gray-700 hover:text-orange-600">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                </li> -->
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💳</span>
                         <span class="text-gray-700 hover:text-orange-600">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">📈</span>
@@ -160,18 +160,18 @@
                         <span class="font-semibold text-gray-800">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💬</span>
                         <span class="text-gray-700">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                </li> -->
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💳</span>
                         <span class="text-gray-700">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">📈</span>
@@ -201,83 +201,46 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-4 lg:p-10 pt-20 lg:pt-10">
+        <main class="flex-1 p-4 lg:p-10 pt-20 lg:pt-10 min-h-screen flex flex-col items-center justify-start">
             <!-- Header for Mobile -->
             <div class="lg:hidden mb-6 text-center">
                 <h1 class="text-2xl font-bold text-orange-600">Candice<span class="text-cyan-700">Kids</span></h1>
                 <p class="text-sm text-pink-500 font-medium">Cerdas Mandiri Ceria</p>
             </div>
 
-            <div class="glass-effect rounded-2xl p-6 lg:p-8 card-hover">
-                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6">
-                    <h2 class="text-2xl lg:text-3xl font-bold text-orange-600 mb-2 lg:mb-0">Aktivitas Harian</h2>
-                    
-                    <!-- Tanggal -->
-                    <div class="text-sm lg:text-base text-gray-500 bg-white/50 px-4 py-2 rounded-full">
-                        📅 {{ now()->format('d/m/Y') }}
+            <div class="w-full max-w-4xl mx-auto mt-8 mb-8">
+                <h2 class="text-3xl font-bold mb-8 text-orange-700 text-center">Aktivitas Anak Saya</h2>
+                @foreach($children as $child)
+                <div class="mb-10">
+                    <div class="mb-2">
+                        <h3 class="text-xl font-bold text-orange-700 text-center">{{ $child->nama_anak }}</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm mb-4 bg-white rounded-xl shadow-lg">
+                            <thead class="bg-gradient-to-r from-orange-200 to-pink-200 text-orange-900 font-bold">
+                                <tr>
+                                    <th class="py-3 px-4">Tanggal</th>
+                                    <th class="py-3 px-4">Jam</th>
+                                    <th class="py-3 px-4">Aktivitas</th>
+                                    <th class="py-3 px-4">Catatan</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white/80">
+                                @forelse($child->activities as $activity)
+                                <tr class="border-b border-gray-100 text-center">
+                                    <td class="py-2 px-4">{{ $activity->tanggal }}</td>
+                                    <td class="py-2 px-4">{{ $activity->jam }}</td>
+                                    <td class="py-2 px-4">{{ $activity->aktivitas }}</td>
+                                    <td class="py-2 px-4">{{ $activity->catatan }}</td>
+                                </tr>
+                                @empty
+                                <tr><td colspan="4" class="text-center py-3 text-gray-400">Belum ada aktivitas</td></tr>
+                                @endforelse
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                
-                <!-- Daftar Aktivitas -->
-                <div class="space-y-6">
-                    <!-- Aktivitas Container -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-                        <!-- Aktivitas List -->
-                        <div class="space-y-4">
-                            <!-- Aktivitas 1 -->
-                            <div class="activity-item bg-white/60 backdrop-blur-sm rounded-xl p-4 border-l-4 border-orange-400">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center gap-3">
-                                        <span class="text-2xl">🎨</span>
-                                        <span class="font-semibold text-gray-800">Belajar bentuk dan warna</span>
-                                    </div>
-                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">09.00 - 10.00</span>
-                                </div>
-                            </div>
-
-                            <!-- Aktivitas 2 -->
-                            <div class="activity-item bg-white/60 backdrop-blur-sm rounded-xl p-4 border-l-4 border-green-400">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center gap-3">
-                                        <span class="text-2xl">🍽️</span>
-                                        <span class="font-semibold text-gray-800">Makan siang</span>
-                                    </div>
-                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">11.30</span>
-                                </div>
-                            </div>
-
-                            <!-- Aktivitas 3 -->
-                            <div class="activity-item bg-white/60 backdrop-blur-sm rounded-xl p-4 border-l-4 border-blue-400">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center gap-3">
-                                        <span class="text-2xl">😴</span>
-                                        <span class="font-semibold text-gray-800">Tidur siang</span>
-                                    </div>
-                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">12.30 - 14.00</span>
-                                </div>
-                            </div>
-
-                            <!-- Aktivitas 4 -->
-                            <div class="activity-item bg-white/60 backdrop-blur-sm rounded-xl p-4 border-l-4 border-purple-400">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center gap-3">
-                                        <span class="text-2xl">💃</span>
-                                        <span class="font-semibold text-gray-800">Senam Irama</span>
-                                    </div>
-                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">15.00 - 16.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Image Section -->
-                        <div class="flex justify-center lg:justify-end items-center">
-                            <div class="glass-effect rounded-2xl p-4 card-hover">
-                                <img src="{{ asset('img/aktivitas.png') }}" alt="Aktivitas Harian" 
-                                     class="w-full max-w-sm lg:max-w-md h-auto rounded-xl shadow-lg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </main>
     </div>

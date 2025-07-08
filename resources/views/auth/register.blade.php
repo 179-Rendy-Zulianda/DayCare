@@ -201,8 +201,9 @@
 
             <!-- SUBMIT -->
             <div class="pt-2 sm:pt-4">
-                <button type="submit" 
-                        class="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-orange font-bold py-2 sm:py-3 lg:py-4 px-4 sm:px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <button type="submit"
+                    class="w-full py-3 sm:py-4 rounded-2xl font-bold text-white text-base sm:text-lg flex items-center justify-center gap-2 shadow-lg"
+                    style="background: linear-gradient(90deg, #f97316 0%, #ec4899 100%) !important; color: #fff !important; border: none !important; box-shadow: 0 4px 14px 0 rgba(236,72,153,0.15);">
                     🚀 REGISTER
                 </button>
             </div>

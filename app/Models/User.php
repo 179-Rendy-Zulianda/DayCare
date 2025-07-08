@@ -18,6 +18,7 @@ class User extends Authenticatable
         'phone',
         'address',
         'password',
+        'role',
     ];
 
     protected $hidden = [
@@ -28,4 +29,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function children()
+    {
+        return $this->hasMany(Child::class, 'user_id');
+    }
+
+    public function activities()
+    {
+        return $this->hasMany(Activity::class, 'created_by');
+    }
 }

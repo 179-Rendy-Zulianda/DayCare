@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 
 // Public Routes
 Route::get('/', function () {
@@ -26,9 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/chat', function () {
         return view('chat');
     })->name('chat');
-    Route::get('/aktivitas', function () {
-        return view('aktivitas');
-    })->name('aktivitas');
+    Route::get('/aktivitas', [App\Http\Controllers\ActivityController::class, 'index'])->name('aktivitas');
     Route::get('/absen', function () {
         return view('absen');
     })->name('absen');
@@ -50,7 +50,6 @@ Route::middleware('auth')->group(function () {
     // Fitur Aplikasi
     Route::view('/daftar', 'daftar')->name('daftar');
     Route::view('/absen', 'absen')->name('absen');
-    Route::view('/aktivitas', 'aktivitas')->name('aktivitas');
     Route::view('/chat', 'chat')->name('chat');
     Route::view('/tagihan', 'tagihan')->name('tagihan');
     Route::view('/perkembangan', 'perkembangan')->name('perkembangan');
@@ -65,8 +64,31 @@ Route::middleware('auth')->group(function () {
 Route::prefix('admin')->group(function () {
     Route::view('/dashboard', 'admin.dashboard')->name('admin.dashboard');
     Route::view('/user', 'admin.user')->name('admin.user');
-    Route::view('/anak', 'admin.anak')->name('admin.anak');
+    Route::get('/anak', [App\Http\Controllers\ChildController::class, 'index'])->name('admin.anak');
     Route::view('/tagihan', 'admin.tagihan')->name('admin.tagihan');
-    Route::view('/aktivitas', 'admin.aktivitas')->name('admin.aktivitas');
     Route::view('/notifikasi', 'admin.notifikasi')->name('admin.notifikasi');
 });
+
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    Route::resource('children', App\Http\Controllers\ChildController::class, [
+        'as' => 'admin'
+    ])->only(['create', 'store', 'edit', 'update', 'destroy']);
+    Route::get('/user', [App\Http\Controllers\AdminUserController::class, 'index'])->name('admin.user');
+    Route::get('/user/{id}/edit', [App\Http\Controllers\AdminUserController::class, 'edit'])->name('admin.user.edit');
+    Route::put('/user/{id}', [App\Http\Controllers\AdminUserController::class, 'update'])->name('admin.user.update');
+    Route::delete('/user/{id}', [App\Http\Controllers\AdminUserController::class, 'destroy'])->name('admin.user.destroy');
+});
+
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::resource('aktivitas', App\Http\Controllers\AdminActivityController::class, [
+        'as' => 'admin'
+    ]);
+});
+
+Route::get('password/forgot', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+Route::get('password/reset-form', [ResetPasswordController::class, 'showResetFormNoToken'])->name('password.reset.form');
+
+Route::post('/daftar', [App\Http\Controllers\ChildController::class, 'store'])->name('daftar');

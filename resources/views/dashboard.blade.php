@@ -77,18 +77,18 @@
                         <span class="text-gray-700 hover:text-orange-600">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💬</span>
                         <span class="text-gray-700 hover:text-orange-600">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                </li> -->
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💳</span>
                         <span class="text-gray-700 hover:text-orange-600">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">📈</span>
@@ -153,18 +153,18 @@
                         <span class="text-gray-700">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💬</span>
                         <span class="text-gray-700">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                </li> -->
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💳</span>
                         <span class="text-gray-700">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">📈</span>
@@ -201,6 +201,12 @@
                 <p class="text-sm text-pink-500 font-medium">Cerdas Mandiri Ceria</p>
             </div>
 
+            @if(session('success'))
+            <div class="mb-4 p-4 rounded bg-green-100 text-green-800 font-semibold border border-green-300 shadow">
+                {{ session('success') }}
+            </div>
+            @endif
+
             <!-- Grid Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                 <div class="glass-effect rounded-2xl text-center p-6 card-hover">
@@ -211,10 +217,10 @@
                     <img src="{{ asset('img/Tuition.png') }}" alt="Daily Activities" class="mx-auto mb-4 w-12 h-12 lg:w-16 lg:h-16">
                     <a href="{{ route('aktivitas') }}" class="block font-semibold text-gray-800 hover:text-orange-600 transition-colors">Daily Activities</a>
                 </div>
-                <div class="glass-effect rounded-2xl text-center p-6 card-hover">
+                <!-- <div class="glass-effect rounded-2xl text-center p-6 card-hover">
                     <img src="{{ asset('img/SMS.png') }}" alt="Chat Pengasuh" class="mx-auto mb-4 w-12 h-12 lg:w-16 lg:h-16">
                     <a href="{{ route('chat') }}" class="block font-semibold text-gray-800 hover:text-orange-600 transition-colors">Chat Pengasuh</a>
-                </div>
+                </div> -->
                 <div class="glass-effect rounded-2xl text-center p-6 card-hover">
                     <img src="{{ asset('img/Card Payment.png') }}" alt="Bayar & Tagihan" class="mx-auto mb-4 w-12 h-12 lg:w-16 lg:h-16">
                     <a href="{{ route('tagihan') }}" class="block font-semibold text-gray-800 hover:text-orange-600 transition-colors">Lihat Bayar & Tagihan</a>

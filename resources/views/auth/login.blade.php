@@ -116,7 +116,7 @@
 
             <!-- Forgot Password -->
             <div class="text-right">
-                <a href="#" class="text-xs sm:text-sm lg:text-base text-orange-600 hover:text-orange-700 font-medium transition-colors">
+                <a href="{{ route('password.request') }}" class="text-xs sm:text-sm lg:text-base text-orange-600 hover:text-orange-700 font-medium transition-colors">
                     🔑 Lupa Sandi?
                 </a>
             </div>
@@ -125,7 +125,7 @@
             <div class="pt-2 sm:pt-4">
                 <button 
                     type="submit" 
-                    class="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-orange font-bold py-2 sm:py-3 lg:py-4 px-4 sm:px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 sm:py-3 lg:py-4 px-4 sm:px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                     🚀 LOGIN
                 </button>

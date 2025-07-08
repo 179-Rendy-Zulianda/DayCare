@@ -38,7 +38,7 @@
     <!-- Hero Section -->
     <header class="relative text-center p-4 lg:p-6">
         <!-- Sign In Button -->
-        <a href="{{ route('login') }}" class="absolute top-4 lg:top-6 right-4 lg:right-6 glass-effect px-4 py-2 rounded-full text-sm font-semibold hover:bg-white/40 transition-all duration-300 shadow-lg z-10">
+        <a href="{{ route('login') }}" class="absolute top-6 lg:top-8 right-6 lg:right-8 bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm lg:text-base font-bold shadow-xl hover:shadow-2xl transition-all duration-300 z-10 transform hover:scale-105">
             🔐 Sign In
         </a>
 
@@ -162,7 +162,6 @@
     </section>
 
     <!-- Lokasi Kami -->
-<<<<<<< HEAD
     <section class="text-center mt-14 px-6">
         <h2 class="text-xl md:text-2xl font-bold bg-white inline-block px-6 py-2 rounded-full mb-4">Lokasi Kami</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mx-auto max-w-4xl">
@@ -180,47 +179,5 @@
             </div>
         </div>
     </section>
-=======
-    <section class="text-center mt-8 lg:mt-16 px-4 lg:px-6 pb-8">
-        <div class="glass-effect rounded-2xl p-6 lg:p-8">
-            <h2 class="text-xl lg:text-3xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                📍 Lokasi Kami
-            </h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center mx-auto max-w-6xl">
-                <div class="space-y-4">
-                    <div class="card-hover">
-                        <img src="{{ asset('img/maps.png') }}" alt="Maps" 
-                             class="w-full rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    </div>
-                    
-                    <div class="glass-effect px-4 py-3 rounded-xl text-sm lg:text-base">
-                        <p class="font-semibold">📍 Alamat:</p>
-                        <p>59PP+QCV, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55161</p>
-                    </div>
-                    
-                    <a href="#hubungi" 
-                       class="inline-block glass-effect px-6 py-3 rounded-full hover:bg-white/40 transition-all duration-300 shadow-lg font-semibold">
-                        📞 Hubungi Kami
-                    </a>
-                </div>
-                
-                <div class="flex justify-center">
-                    <div class="floating">
-                        <img src="{{ asset('img/kidsfooter.png') }}" alt="Kids Footer" 
-                             class="w-40 lg:w-56 h-auto">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-6 glass-effect mt-8">
-        <p class="text-sm lg:text-base text-gray-700">
-            © 2024 Candice Kids - Cerdas Mandiri Ceria. All rights reserved.
-        </p>
-    </footer>
->>>>>>> ec72212d0241cec5a9a55aaf3e673c7f32e7d189
 </body>
 </html>

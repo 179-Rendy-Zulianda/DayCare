@@ -77,18 +77,18 @@
                         <span class="text-gray-700 hover:text-orange-600">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💬</span>
                         <span class="text-gray-700 hover:text-orange-600">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="bg-gradient-to-r from-yellow-300 to-orange-300 rounded-xl px-4 py-3 flex items-center gap-3 shadow-md">
+                </li> -->
+                <!-- <li class="bg-gradient-to-r from-yellow-300 to-orange-300 rounded-xl px-4 py-3 flex items-center gap-3 shadow-md">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">💳</span>
                         <span class="font-semibold text-gray-800">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-xl">📈</span>
@@ -153,18 +153,18 @@
                         <span class="text-gray-700">Aktivitas Harian</span>
                     </a>
                 </li>
-                <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
+                <!-- <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('chat') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💬</span>
                         <span class="text-gray-700">Chat Pengasuh</span>
                     </a>
-                </li>
-                <li class="bg-gradient-to-r from-yellow-300 to-orange-300 rounded-xl px-4 py-3 flex items-center gap-3 shadow-md">
+                </li> -->
+                <!-- <li class="bg-gradient-to-r from-yellow-300 to-orange-300 rounded-xl px-4 py-3 flex items-center gap-3 shadow-md">
                     <a href="{{ route('tagihan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">💳</span>
                         <span class="font-semibold text-gray-800">Tagihan & Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item rounded-xl px-4 py-3 flex items-center gap-3">
                     <a href="{{ route('perkembangan') }}" class="flex items-center gap-3 w-full">
                         <span class="text-lg">📈</span>
